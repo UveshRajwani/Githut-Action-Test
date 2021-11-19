@@ -1,6 +1,6 @@
 name: Js Action
 
-on: push
+on: [push, pull_request]
 
 jobs:
   simple-js-action:
@@ -15,7 +15,7 @@ jobs:
       - name: List Files
         run: |
           pwd 
-          ls  
+          ls 
       - name: echo my name
         id: greet
         uses: actions/hello-world-javascript-action@v1
