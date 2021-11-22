@@ -1,7 +1,10 @@
 name: Js Action
 
 on: 
-  push:
+  repository_dispatch:
+    types: [build] 
+  #schedule:
+   # - cron: "*****"
   pull_request:
     types: [closed, assigned, reopened]
 
