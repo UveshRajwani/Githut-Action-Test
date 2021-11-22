@@ -1,6 +1,12 @@
 name: Js Action
 
-on: [push, pull_request]
+on: 
+  repository_dispatch:
+    types: [build] 
+  #schedule:
+   # - cron: "*****"
+  pull_request:
+    types: [closed, assigned, reopened]
 
 jobs:
   simple-js-action:
